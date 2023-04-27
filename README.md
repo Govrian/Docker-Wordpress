@@ -85,3 +85,12 @@ services:
 ```
 
 https://hub.docker.com/u/govrian
+
+
+## Entrypoint
+
+J'ai ajouté un exemple d'entrypoint pour le service Wordpress. L'entrypoint sera utilisé pour exécuter un script personnalisé lors du démarrage du conteneur. Dans cet exemple, j'ai ajouté un script shell appelé "entrypoint.sh" qui sera exécuté au démarrage du conteneur Wordpress.  
+  
+Pour implémenter cet exemple, créez un fichier entrypoint.sh à la racine de votre projet et assurez-vous qu'il est exécutable (chmod +x entrypoint.sh). Le contenu du fichier doit être adapté en fonction de vos besoins.  
+
+Cette configuration ajoutera l'entrypoint au service Wordpress, qui exécutera le script shell entrypoint.sh au démarrage du conteneur.
