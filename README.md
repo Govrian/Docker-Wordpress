@@ -50,3 +50,35 @@ projet/
 │  
 └─ maildev/  
     └─ Dockerfile  
+
+
+Par exemple, si vous souhaitez personnaliser l'image WordPress, vous pouvez créer un fichier Dockerfile dans un dossier nommé custom-wordpress:
+```
+custom-wordpress/Dockerfile  
+
+Utilisez l'image de base wordpress:latest  
+FROM wordpress:latest  
+  
+Ajoutez ici les commandes pour personnaliser l'image, par exemple :  
+COPY, ADD, RUN, etc.  
+```
+
+Après avoir créé le Dockerfile, construisez l'image personnalisée en utilisant la commande docker build. Assurez-vous de remplacer mon_identifiant_dockerhub par votre nom d'utilisateur Docker Hub et mon_tag par le tag que vous souhaitez attribuer à l'image (par exemple, "latest" ou "v1.0"):
+
+```
+docker build -t mon_identifiant_dockerhub/custom-wordpress:mon_tag custom-wordpress/
+```
+
+Ensuite, mettez à jour votre fichier docker-compose.yml pour utiliser cette image personnalisée :
+
+```
+# ...  
+services:  
+  # ...  
+  wordpress:  
+    depends_on:  
+      - db  
+    image: mon_identifiant_dockerhub/custom-wordpress:mon_tag  
+    # ...  
+```
+
