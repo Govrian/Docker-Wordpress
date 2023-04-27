@@ -33,3 +33,20 @@ Pour arrêter et supprimer les conteneurs, les volumes et les réseaux, exécute
 ```bash
 docker-compose down
 ```
+
+
+Pour utiliser ce docker-compose.yml,il n'y besoin de créer de Dockerfiles supplémentaires, car nous utilisons des images officielles de Docker Hub pour les services. Cependant, voici l'arborescence que vous devez avoir pour ce projet si vous voulez mettre vos propre images :
+
+projet/  
+│  
+├─ docker-compose.yml  
+│  
+├─ wordpress/  
+│   ├─ Dockerfile  
+│   └─ wp-content/ (répertoire contenant vos thèmes et plugins pour WordPress)  
+│  
+├─ phpmyadmin/  
+│   └─ Dockerfile  
+│  
+└─ maildev/  
+    └─ Dockerfile  
