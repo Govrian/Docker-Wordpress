@@ -1,12 +1,10 @@
 #!/bin/sh
-set -e
 
-# Exemple de commande à exécuter avant le démarrage du serveur Apache
-echo "Exécution d'une commande personnalisée avant le démarrage d'Apache..."
-
-# Démarrage du serveur Apache en arrière-plan
-apache2-foreground &
-pid="$!"
-
-# Attente de l'arrêt du serveur Apache
-wait "$pid"
+# Vérifier si la commande 'time' est passée en argument
+if [ "$1" = "time" ]; then
+  # Afficher l'heure actuelle
+  date
+else
+  # Exécuter la commande passée en argument
+  exec "$@"
+fi
