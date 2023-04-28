@@ -103,7 +103,7 @@ services:
 https://hub.docker.com/u/govrian
 
 
-Comme demandé j'ai créer un Dockerfile avec comme image "govrian/101-todo-app" qui est sur mon compte Dockerhub lié a un entrypoint.sh qui permet de d'indiquer l'heure.  
+Comme demandé j'ai créer un Dockerfile avec comme image "govrian/101-todo-app" qui est sur mon compte Dockerhub lié a un entrypoint.sh qui permet d'indiquer l'heure.  
 
 ```
 docker build -t <nom> .
