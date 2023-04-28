@@ -50,10 +50,10 @@ Pour arrêter et supprimer les conteneurs, les volumes et les réseaux, exécute
 docker-compose down
 ```
 
-## Personnalisationb avec des images Dockerfile
+## Personnalisation avec des images Dockerfile
 
 
-Pour utiliser ce docker-compose.yml,il n'y besoin de créer de Dockerfiles supplémentaires, car nous utilisons des images officielles de Docker Hub pour les services. Cependant, voici l'arborescence que vous devez avoir pour ce projet si vous voulez mettre vos propre images :
+Pour utiliser ce docker-compose.yml,il n'y a pas besoin de créer de Dockerfiles supplémentaires, car nous utilisons des images officielles de Docker Hub pour les services. Cependant, voici l'arborescence que vous devez avoir pour ce projet si vous voulez mettre vos propre images :
 
 projet/  
 │  
