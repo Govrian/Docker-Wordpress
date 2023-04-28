@@ -1,6 +1,16 @@
 # Projet WordPress avec Docker Compose
 
-Ce projet met en place un environnement WordPress complet, comprenant MariaDB, PHPMyAdmin et MailDev, en utilisant Docker Compose.
+### Consigne du projet :
+
+- Un docker-compose qui a au moins 2 services qui communiquent  
+- Une image Docker customisé qui vient de votre compte Docker Hub (ou tous mais au moins un)  
+- L'image contient un entrypoint custom  
+- Au moins un volume partagé avec la machine hôte pour pouvoir garder un état si on éteint et redémarre le docker-compose  
+- Des variables d'environnement pris en compte dans le container (dans le entrypoint ou par example pour connecter le back à la base de données)  
+  
+
+Ce projet met en place un environnement WordPress complet, comprenant MariaDB, PHPMyAdmin et MailDev, en utilisant Docker Compose.  
+Mais aussi l'utilisation d'un Dokcerfile avec un entrypoint basé sur une image personnalisé depuis mon compte DokcherHub.
 
 ## Conteneurs et configuration
 
