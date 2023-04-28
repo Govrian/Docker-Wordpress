@@ -30,7 +30,7 @@ Le fichier `docker-compose.yml` définit les conteneurs et les configurations su
 ## Configuration des conteneurs
 Dans ce projet, trois conteneurs principaux sont configurés pour interagir ensemble :
 
-**Conteneur WordPress** : Le conteneur est nommé "wordpress" et est construit à partir de l'image "wordpress". Il est lié à la base de données "db" et expose le port 80 de la machine hôte sur le port 8081. Un volume est également copié pour persister les données.
+**Conteneur WordPress** : Le conteneur est nommé "wordpress" et est construit à partir de l'image "wordpress". Il est lié à la base de données "db" et expose le port 80. Un volume est également copié pour persister les données.
 
 **Conteneur MariaDB** : Le conteneur est nommé "wpmariadb" et est construit à partir de l'image "mariadb". Il initialise une variable d'environnement "MYSQL_ROOT_PASSWORD" avec la valeur "root" et expose le port 3306 de la machine hôte sur le port 3306 du conteneur.
 
