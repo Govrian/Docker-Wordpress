@@ -11,6 +11,12 @@
 
 Ce projet met en place un environnement WordPress complet, comprenant MariaDB, PHPMyAdmin et MailDev, en utilisant Docker Compose.  
 Mais aussi l'utilisation d'un Dokcerfile avec un entrypoint basé sur une image personnalisé depuis mon compte DokcherHub.
+  
+Récupération de mon projet : 
+
+```
+git clone https://github.com/Govrian/Docker-Wordpress
+```
 
 ## Conteneurs et configuration
 
