@@ -1,6 +1,7 @@
+# Version a utiliser pour le format du fichier docker-compose
 version: "3.9"
 
-services:
+services :
 
   # CONTAINER - MYSQL : https://hub.docker.com/_/mysql
   db:
@@ -24,9 +25,7 @@ services:
     image: wordpress:latest
     container_name: wp_wordpress
     restart: always
-    volumes:
-      - "./:/var/www/html"
-      - "./entrypoint.sh:/entrypoint.sh"
+    volumes: ["./:/var/www/html"]
     environment:
       WORDPRESS_DB_HOST: db:3306
       WORDPRESS_DB_USER: wordpress
@@ -37,7 +36,6 @@ services:
       - wp
     links:
       - "maildev:maildev"
-    entrypoint: ["/bin/sh", "/entrypoint.sh"]
 
   # CONTAINER - PHPMYADMIN : https://hub.docker.com/r/phpmyadmin/phpmyadmin
   phpmyadmin:
