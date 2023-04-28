@@ -87,6 +87,18 @@ services:
 https://hub.docker.com/u/govrian
 
 
+Comme demandé j'ai créer un Dockerfile avec comme image "govrian/101-todo-app" qui est sur mon compte Dockerhub lié a un entrypoint.sh qui permet de d'indiquer l'heure.  
+
+```
+docker build -t <nom> .
+```
+Puis pour tester :  
+
+```
+docker run <nom> time  
+> Thu Feb 18 14:27:47 UTC 2021  
+```
+
 ## Entrypoint
 
 J'ai ajouté un exemple d'entrypoint pour le service Wordpress. L'entrypoint sera utilisé pour exécuter un script personnalisé lors du démarrage du conteneur. Dans cet exemple, j'ai ajouté un script shell appelé "entrypoint.sh" qui sera exécuté au démarrage du conteneur Wordpress.  
